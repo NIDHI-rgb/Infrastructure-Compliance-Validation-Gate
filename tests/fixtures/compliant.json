@@ -1,0 +1,21 @@
+{
+  "resource_changes": [
+    {
+      "address": "google_compute_firewall.allow_ssh_restricted",
+      "type": "google_compute_firewall",
+      "change": {
+        "actions": ["create"],
+        "after": {
+          "direction": "INGRESS",
+          "source_ranges": ["203.0.113.10/32"],
+          "allow": [
+            {
+              "protocol": "tcp",
+              "ports": ["22"]
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
